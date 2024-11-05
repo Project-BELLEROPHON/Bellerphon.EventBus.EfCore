@@ -1,4 +1,4 @@
-namespace Bellerophon.EventBus.EfCore.Abstractions.Exceptions.Base;
+namespace Bellerphon.EventBus.EfCore.Abstractions.Exceptions.Base;
 
 public class BellerophonEventBusException : Exception
 {

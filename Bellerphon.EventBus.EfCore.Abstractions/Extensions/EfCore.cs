@@ -1,12 +1,12 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Channels;
-using Bellerophon.EventBus.EfCore.Abstractions.Configs;
-using Bellerophon.EventBus.EfCore.Abstractions.Entities;
+using Bellerphon.EventBus.EfCore.Abstractions.Configs;
+using Bellerphon.EventBus.EfCore.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Bellerophon.EventBus.EfCore.Abstractions.Extensions;
+namespace Bellerphon.EventBus.EfCore.Abstractions.Extensions;
 
 public static class EfCore
 {
@@ -32,6 +32,9 @@ public static class EfCore
             {
                 entity.HasKey(m => m.Id);
 
+                entity.Property(m => m.EventName)
+                    .IsRequired();
+                
                 entity.Property(m => m.Id)
                     .HasConversion<string>(id => id.ToString(), idInString => Ulid.Parse(idInString));
                 

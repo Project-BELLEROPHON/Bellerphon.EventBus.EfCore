@@ -1,8 +1,9 @@
-namespace Bellerophon.EventBus.EfCore.Abstractions.Entities;
+namespace Bellerphon.EventBus.EfCore.Abstractions.Entities;
 
 public class OutBoxMessage
 {
     public Ulid Id { get; set; } = Ulid.NewUlid();
+    public string EventName { get; set; }
     public string Body { get; set; }
     public string? Headers { get; set; }
     public bool IsSent { get; set; }

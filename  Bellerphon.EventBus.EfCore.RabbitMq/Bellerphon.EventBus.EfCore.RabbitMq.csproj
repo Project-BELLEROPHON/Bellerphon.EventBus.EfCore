@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bellerophon.EventBus.EfCore.Abstractions\Bellerophon.EventBus.EfCore.Abstractions.csproj" />
+      <ProjectReference Include="..\Bellerphon.EventBus.EfCore.Abstractions\Bellerphon.EventBus.EfCore.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

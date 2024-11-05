@@ -1,6 +1,6 @@
-using Bellerophon.EventBus.EfCore.Abstractions.Exceptions.Base;
+using Bellerphon.EventBus.EfCore.Abstractions.Exceptions.Base;
 
-namespace Bellerophon.EventBus.EfCore.Abstractions.Configs;
+namespace Bellerphon.EventBus.EfCore.Abstractions.Configs;
 
 public class EventBusConfigs
 {
