@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bellerophon.EventBus.EfCore.Abstractions", "Bellerophon.EventBus.EfCore.Abstractions\Bellerophon.EventBus.EfCore.Abstractions.csproj", "{FC0A76E6-DA4C-47B2-82C4-674797AE2C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bellerphon.EventBus.EfCore.RabbitMq", " Bellerphon.EventBus.EfCore.RabbitMq\Bellerphon.EventBus.EfCore.RabbitMq.csproj", "{F1E2FFAF-545B-4119-919C-A0B46C684E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bellerphon.EventBus.EfCore.Tests", " Bellerphon.EventBus.EfCore.Tests\Bellerphon.EventBus.EfCore.Tests.csproj", "{A1882FD6-CBAE-48B7-A68B-4545D098F84F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC0A76E6-DA4C-47B2-82C4-674797AE2C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0A76E6-DA4C-47B2-82C4-674797AE2C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0A76E6-DA4C-47B2-82C4-674797AE2C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0A76E6-DA4C-47B2-82C4-674797AE2C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E2FFAF-545B-4119-919C-A0B46C684E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E2FFAF-545B-4119-919C-A0B46C684E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E2FFAF-545B-4119-919C-A0B46C684E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E2FFAF-545B-4119-919C-A0B46C684E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1882FD6-CBAE-48B7-A68B-4545D098F84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1882FD6-CBAE-48B7-A68B-4545D098F84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1882FD6-CBAE-48B7-A68B-4545D098F84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1882FD6-CBAE-48B7-A68B-4545D098F84F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
