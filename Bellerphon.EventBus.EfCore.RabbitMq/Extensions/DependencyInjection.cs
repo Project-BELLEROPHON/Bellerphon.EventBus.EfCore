@@ -14,7 +14,7 @@ public static class DependencyInjection
         EfCoreEventBusRabbitConfig config = new EfCoreEventBusRabbitConfig();
         configAction.Invoke(config);
         return services
-            .AddScoped(typeof(IPublisher<>),typeof(RabbitMqPublisher<>))
+            .AddScoped(typeof(IPublisher<>),typeof(RabbitMqOutBoxPublisher<>))
             .AddSingleton<EfCoreEventBusRabbitConfig>(config);
     }
 }

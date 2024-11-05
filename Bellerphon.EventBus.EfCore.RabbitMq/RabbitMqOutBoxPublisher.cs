@@ -7,12 +7,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Bellerphon.EventBus.EfCore.RabbitMq;
 
-public class RabbitMqPublisher<TDbContext> : IPublisher<TDbContext>
+public class RabbitMqOutBoxPublisher<TDbContext> : IPublisher<TDbContext>
     where TDbContext : DbContext
 {
     private readonly TDbContext _context;
 
-    public RabbitMqPublisher(TDbContext context)
+    public RabbitMqOutBoxPublisher(TDbContext context)
     {
         _context = context;
     }
