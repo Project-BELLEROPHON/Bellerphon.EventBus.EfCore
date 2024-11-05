@@ -32,6 +32,9 @@ public static class EfCore
             {
                 entity.HasKey(m => m.Id);
 
+                entity.Property(m => m.Id)
+                    .HasConversion<string>(id => id.ToString(), idInString => Ulid.Parse(idInString));
+                
                 entity.Property(m => m.Body)
                     .IsRequired();
                 
