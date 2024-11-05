@@ -1,6 +1,5 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Threading.Channels;
 using Bellerphon.EventBus.EfCore.Abstractions.Configs;
 using Bellerphon.EventBus.EfCore.Abstractions.Constants;
 using Bellerphon.EventBus.EfCore.Abstractions.Entities;

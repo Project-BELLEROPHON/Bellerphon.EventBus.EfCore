@@ -18,7 +18,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ Bellerphon.EventBus.EfCore.RabbitMq\Bellerphon.EventBus.EfCore.RabbitMq.csproj" />
       <ProjectReference Include="..\Bellerphon.EventBus.EfCore.RabbitMq\Bellerphon.EventBus.EfCore.RabbitMq.csproj" />
     </ItemGroup>
 

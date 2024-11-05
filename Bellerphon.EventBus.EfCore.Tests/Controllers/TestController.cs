@@ -15,11 +15,16 @@ public class TestController : ControllerBase
     {
         _publisher = publisher;
     }
+    
     [HttpPost]
     public async Task<IActionResult> PostAsync(CancellationToken token)
     {
         await _publisher.Publish(
             body: new UserCreatedEvent(){UserName = "Test"},
+            headers: null, 
+            token);
+        await _publisher.Publish(
+            body: new UserCreatedEvent(){UserName = "Test2"},
             headers: null, 
             token);
         await _publisher.SaveChangesAsync(token);

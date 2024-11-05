@@ -10,9 +10,9 @@ namespace Bellerphon.EventBus.EfCore.RabbitMq;
 public class RabbitMqPublisher<TDbContext> : IPublisher<TDbContext>
     where TDbContext : DbContext
 {
-    private readonly DbContext _context;
+    private readonly TDbContext _context;
 
-    public RabbitMqPublisher(DbContext context)
+    public RabbitMqPublisher(TDbContext context)
     {
         _context = context;
     }

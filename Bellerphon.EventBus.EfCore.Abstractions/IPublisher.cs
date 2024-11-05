@@ -1,3 +1,4 @@
+using Bellerphon.EventBus.EfCore.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bellerphon.EventBus.EfCore.Abstractions;
