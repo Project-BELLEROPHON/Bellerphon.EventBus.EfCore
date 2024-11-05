@@ -1,1 +1,1 @@
-# Bellerphon.Bus.EfCore
+# Bellerphon.EventBus.EfCore
