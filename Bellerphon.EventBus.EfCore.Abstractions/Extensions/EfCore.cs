@@ -2,7 +2,9 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Channels;
 using Bellerphon.EventBus.EfCore.Abstractions.Configs;
+using Bellerphon.EventBus.EfCore.Abstractions.Constants;
 using Bellerphon.EventBus.EfCore.Abstractions.Entities;
+using Bellerphon.EventBus.EfCore.Abstractions.Exceptions.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -10,12 +12,22 @@ namespace Bellerphon.EventBus.EfCore.Abstractions.Extensions;
 
 public static class EfCore
 {
+    private static Type _dbContextConstantsType = typeof(DbContextSpecificConstants<>);
     public static DbContextOptionsBuilder AddEventsBus(this DbContextOptionsBuilder optionsBuilder, EventBusConfigs configs)
     {
         var dbContextType = optionsBuilder.GetType().GetGenericArguments()[0];
         configs.Validate();
         optionsBuilder.UseModel(CreateEventBusModel(dbContextType, configs));
+        SaveEventBusConfigs(configs, dbContextType);
         return optionsBuilder;
+    }
+    
+    private static void SaveEventBusConfigs(EventBusConfigs configs, Type dbContextType)
+    {
+        Type genericType = _dbContextConstantsType.MakeGenericType(dbContextType);
+        MethodInfo? methodInfo = genericType.GetMethod("SetEventBusConfig", BindingFlags.Public | BindingFlags.Static);
+        if(methodInfo is null) throw new BellerophonEventBusException("SetEventBusConfig function was not found in DbContextSpecificConstants class");
+        methodInfo.Invoke(null, new object[] { configs });
     }
 
     private static IModel CreateEventBusModel(Type dbContextType, EventBusConfigs configs) => new ModelBuilder()
